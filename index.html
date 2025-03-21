@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Portifólio</title>
+	</head>
+	<body>
+		<div class="particulas"></div>
+
+		<nav class="navegacao">
+			<ul class="menu">
+				<li><a class="menu-link" href="#inicio">Início</a></li>
+				<li><a class="menu-link" href="#sobre">Sobre</a></li>
+				<li><a class="menu-link" href="#projetos">Projetos</a></li>
+				<li><a class="menu-link" href="#contatos">Contatos</a></li>
+			</ul>
+		</nav>
+		<main id="inicio" class="cabecalho">
+			<img
+				src="img/WhatsApp Image 2025-03-21 at 15.56.46.jpeg"
+				alt="Foto de Yan Arthur"
+				class="perfil"
+			/>
+			<h1>Yan Arthur</h1>
+			<p class="sub-titulo">Desenvolvedor Front-End</p>
+		</main>
+		<section id="sobre" class="sobre">
+			<h2 class="sobre-titulo">Sobre Mim</h2>
+			<div class="sobre-caixa">
+				<p class="sobre-p">
+					Sou um estudante de 18 anos, atualmente graduando em
+					Bacharelado em Ciência e Tecnologia pela Universidade
+					Federal do Maranhão (UFMA). Tenho uma forte paixão pela área
+					de tecnologia e, especialmente, pelo desenvolvimento
+					front-end. Estudo e me dedico a programação web, com foco em
+					JavaScript, HTML e CSS, buscando sempre aprimorar minhas
+					habilidades e acompanhar as tendências do mercado. Sou
+					motivado, proativo e estou em busca de novos desafios que me
+					permitam expandir meu conhecimento e contribuir para
+					projetos inovadores. Estou aberto a aprender, colaborar em
+					equipes dinâmicas e aplicar meus conhecimentos para criar
+					soluções criativas e funcionais.
+				</p>
+			</div>
+		</section>
+		<section id="projetos" class="projetos">
+			<h2 class="projetos-titulo">Meus Projetos</h2>
+			<div class="projetos-caixa">
+
+
+				<div class="projetos-card">
+					<img
+						src="img/desktop-preview.jpg"
+						alt="Projeot 1"
+						class="projetos-imagem"
+						a
+					/>
+					<div class="textos-projetos">
+						<h3 class="info-projetos">Publisher</h3>
+						<a
+							class="link-projetos"
+							href="https://yan-arthur.github.io/Product-preview-card-component/"
+							target="_blank"
+							><p class="p-projetos">
+								Página dedicada a propraganda de produto, com foco na estética e desing, de fácil uso para qualquer modelo de negócios.
+							</p></a
+						>
+					</div>
+				</div>
+				<div class="projetos-card">
+					<img
+						src="img/preview.jpg"
+						alt="Projeot 1"
+						class="projetos-imagem"
+					/>
+					<div class="textos-projetos">
+						<h3 class="info-projetos">Página de Receitas</h3>
+						<a
+							class="link-projetos"
+							href="https://yan-arthur.github.io/Recipe-page/"
+							target="_blank"
+							><p class="p-projetos">
+								Uso de receitas de alimentos ou outros tipos que convém o uso de listas, para ajudar os usuários na prática
+							</p></a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contatos" class="contatos">
+			<h2 class="contatos-titulo">Entre em Contato</h2>
+
+			<form
+				id="formulario"
+				class="formulario-contatos"
+				onsubmit="enviarWhats(event)"
+				action=""
+			>
+				<div class="grupo-form">
+					<input id="nome" class="campo-form" placeholder="Nome" />
+				</div>
+
+				<div class="grupo-form">
+					<textarea
+						id="mensagem"
+						class="campo-form"
+						placeholder="Digite sua Mensagem"
+						rows="5"
+					></textarea>
+				</div>
+
+				<button class="botao-form" type="submit">
+					Enviar Whatsapp
+				</button>
+			</form>
+		</section>
+
+		<script>
+			function enviarWhats(event) {
+				event.preventDefault();
+
+				const nome = document.getElementById('nome').value;
+				const mensagem = document.getElementById('mensagem').value;
+				const telefone = '5599981382647';
+
+				const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+				const msgFormatada = encodeURIComponent(texto);
+				const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+				window.open(url, '_blank');
+			}
+		</script>
+	</body>
+</html>
