@@ -120,7 +120,7 @@ header section nav a:hover {
     transition: 0.1s linear;
 }
 
-.caixa-sobre h2 {
+.titulo {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -128,7 +128,11 @@ header section nav a:hover {
     font-size: 3rem;
 }
 
-.caixa-sobre h2 span {
+span {
+    color: var(--main-color);
+}
+
+.titulo span {
     color: var(--main-color);
 }
 
@@ -176,4 +180,27 @@ header section nav a:hover {
     font-size: 2rem;
     text-transform: uppercase;
     border-radius: 0.8rem;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 20px;
+    z-index: 4;
+    position: fixed;
+    top: 50%;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    transition: left 0.5s linear;
+}
+
+.mascara-iframe {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
 }
