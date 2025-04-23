@@ -241,6 +241,14 @@ h1 {
     background: radial-gradient(circle at 10% 20%, var(--primaira) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%);
 }
 
+.foot {
+     background: var(--maisescuro);
+    padding: 1rem;
+    text-align: center;
+    color: var(--claro);
+    font-size: 1.2rem;
+}
+
 @keyframes flutuar {
     0%, 100% {
         transform: translateY(0);
